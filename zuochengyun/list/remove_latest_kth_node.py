@@ -13,7 +13,7 @@ def remove_latest_kth_node(head: Node, k: int) -> Node:
         cur = cur.next
 
     if n < k:
-        return Node()
+        return head
     elif n == k:
         head = head.next
         return head
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     node4.next = node5
 
     head = node1
-    head = remove_latest_kth_node(head, 3)
+    head = remove_latest_kth_node(head, 6)
     while head:
         print(head.value)
         head = head.next
