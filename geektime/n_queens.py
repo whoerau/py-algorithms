@@ -9,6 +9,7 @@ def solveNQueens(n: int) -> list:
                 dfs(Q + [column], left + [p - column], right + [p + column])
 
     result = []
+    # [column] 当前行皇后所在位置
     dfs([], [], [])
     return [["." * i + "Q" + "." * (n - i - 1) for i in li] for li in result]
 
